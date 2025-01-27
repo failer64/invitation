@@ -127,7 +127,7 @@
             }));
         }
     }), 0);
-    document.addEventListener("scroll", (async function() {
+    document.addEventListener("click", (async function() {
         document.getElementById("song").play();
     }));
     function mapAdd() {
