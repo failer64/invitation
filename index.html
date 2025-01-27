@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250126231402">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250127222709">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,9 @@
 <body>
 	<div class="wrapper">
 		<main class="page">
+			<audio id="song" preload="auto">
+				<source src="img/1.mp3" type="audio/mp3" />
+			</audio>
 			<div class="page__video">
 				<video autoplay muted loop playsinline>
 					<source src="img/02.mp4" type="video/mp4" />
@@ -26,14 +29,16 @@
 			</div>
 
 			<section class="page__intro intro">
-				<div class="intro__body" data-watch data-watch-once>
-					<img src="img/00.png" alt="" class="intro__img" />
-					<div class="intro__title names">
+				<div class="intro__body">
+					<img src="img/00.png" alt="" class="intro__img" data-watch data-watch-once />
+					<div data-watch data-watch-once class="intro__title names">
 						<div>Никита</div>
 						<img src="img/&.png" alt="" />
 						<div>Нина</div>
 					</div>
-					<div class="intro__date">четверг, 17 июля</div>
+					<div data-watch data-watch-once class="intro__date">
+						четверг, 17 июля
+					</div>
 
 					<div class="intro__triangle triangle"></div>
 				</div>
@@ -44,26 +49,26 @@
 			</section>
 			<section class="page__guests guests">
 				<div class="guests__container">
-					<div class="guests__title title">
+					<div data-watch data-watch-once class="guests__title title">
 						<img src="img/01.png" alt="" />
 						<img src="img/02.png" alt="" />
 					</div>
 					<div class="guests__beards">
 						<img src="img/beads.png" alt="бусы" />
 					</div>
-					<div class="guests__text text">
+					<div data-watch data-watch-once class="guests__text text">
 						Мы верим, что этот день станет<br />
 						красивым началом нашей <span>счастливой</span><br />
 						совместной жизни.<br />Приглашаем вас на нашу
 						<span>свадьбу</span>,<br />
 						которая состоится:
 					</div>
-					<div class="guests__date">
+					<div data-watch data-watch-once class="guests__date">
 						<div>17</div>
 						<div>07</div>
 						<div>25</div>
 					</div>
-					<div class="guests__time">в 12:00</div>
+					<div data-watch data-watch-once class="guests__time">в 12:00</div>
 					<div class="guests__line">
 						<img src="img/line.png" alt="" />
 					</div>
@@ -79,15 +84,15 @@
 			<section class="page__place place">
 				<div class="place__bg"><img src="img/pink.jpg" alt="" /></div>
 				<div class="place__container">
-					<div class="place__title title">
+					<div data-watch data-watch-once class="place__title title">
 						<img src="img/03.png" alt="" />
 					</div>
-					<div class="place__text text">
+					<div data-watch data-watch-once class="place__text text">
 						Наша церемония будет проходить во <br />
 						<span>«Дворце бракосочетания Южное Бутово»</span><br />
 						по адресу: ул. Брусилова, 19А
 					</div>
-					<div class="place__map" id="map"></div>
+					<div data-watch data-watch-once class="place__map" id="map"></div>
 				</div>
 				<div class="line">
 					<img src="img/line.png" alt="" />
@@ -96,26 +101,26 @@
 			<section class="page__dress dress">
 				<img class="dress__pearl" src="img/dress/pearl.png" alt="" />
 				<div class="dress__container">
-					<div class="dress__title title">
+					<div data-watch data-watch-once class="dress__title title">
 						<img src="img/05.png" alt="" />
 					</div>
 					<div class="dress__beads"><img src="img/beads.png" alt="" /></div>
-					<div class="dress__text text">
+					<div data-watch data-watch-once class="dress__text text">
 						Цветовая палитра нарядов<br />
 						<span>нашей свадьбы:</span>
 					</div>
 
 					<div class="dress__images">
-						<div class="dress__image">
+						<div data-watch data-watch-once class="dress__image dress__image_1">
 							<img src="img/dress/01.jpg" alt="" />
 						</div>
-						<div class="dress__image">
+						<div data-watch data-watch-once class="dress__image dress__image_2">
 							<img src="img/dress/02.jpg" alt="" />
 						</div>
-						<div class="dress__image">
+						<div data-watch data-watch-once class="dress__image dress__image_3">
 							<img src="img/dress/03.png" alt="" />
 						</div>
-						<div class="dress__image">
+						<div data-watch data-watch-once class="dress__image dress__image_4">
 							<img src="img/dress/04.jpg" alt="" />
 						</div>
 					</div>
@@ -132,10 +137,12 @@
 			</section>
 			<section class="page__wishes wishes">
 				<div class="wishes__container">
-					<div class="wishes__title title">Пожелания</div>
+					<div data-watch data-watch-once class="wishes__title title">
+						Пожелания
+					</div>
 
 					<img src="img/02.svg" alt="" class="wishes__image" />
-					<div class="wishes__text text">
+					<div data-watch data-watch-once class="wishes__text text">
 						Денежные конверты будут лучшим подарком, который мы используем на
 						исполнение наших желаний.
 					</div>
@@ -147,12 +154,12 @@
 			<section class="page__club club">
 				<div class="club__bg"><img src="img/06.png" alt="" /></div>
 				<div class="club__container">
-					<div class="club__title">
+					<div data-watch data-watch-once class="club__title">
 						Вступайте<br />
 						в наш чат:
 					</div>
 					<div class="club__triangle triangle"></div>
-					<a href="https://t.me/+K6H_iW_7AxdhOTI6" class="club__link">
+					<a data-watch data-watch-once href="https://t.me/+K6H_iW_7AxdhOTI6" class="club__link">
 						https://t.me/+K6H_iW_7AxdhOTI6</a>
 				</div>
 			</section>
@@ -171,7 +178,7 @@
 			</section>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20250126231402"></script>
+	<script src="js/app.min.js?_v=20250127222709"></script>
 </body>
 
 </html>

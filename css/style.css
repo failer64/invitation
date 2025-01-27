@@ -272,20 +272,9 @@ body {
   margin: 0 auto;
 }
 
-.intro__img {
-  opacity: 0;
-  -webkit-transform: translate(0, 50px);
-      -ms-transform: translate(0, 50px);
-          transform: translate(0, 50px);
-  -webkit-transition: all .5s ease 1s;
-  transition: all .5s ease 1s;
-}
-
-._watcher-view .intro__img {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+.intro__img._watcher-view {
+  -webkit-transition: all .8s ease .5s;
+  transition: all .8s ease .5s;
 }
 
 .intro__title {
@@ -296,12 +285,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  opacity: 0;
-  -webkit-transform: translate(0, 50px);
-      -ms-transform: translate(0, 50px);
-          transform: translate(0, 50px);
-  -webkit-transition: all .5s ease 1.5s;
-  transition: all .5s ease 1.5s;
 }
 
 .intro__title>div {
@@ -320,11 +303,9 @@ body {
   width: 80px;
 }
 
-._watcher-view .intro__title {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+.intro__title._watcher-view {
+  -webkit-transition: all .8s ease 1s;
+  transition: all .8s ease 1s;
 }
 
 .intro__date {
@@ -333,18 +314,14 @@ body {
   letter-spacing: 5.5px;
   white-space: nowrap;
   opacity: 0;
-  -webkit-transform: translate(0, 50px);
-      -ms-transform: translate(0, 50px);
-          transform: translate(0, 50px);
-  -webkit-transition: all .5s ease 2s;
-  transition: all .5s ease 2s;
+  -webkit-transform: translate(0, 100px);
+      -ms-transform: translate(0, 100px);
+          transform: translate(0, 100px);
 }
 
-._watcher-view .intro__date {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+.intro__date._watcher-view {
+  -webkit-transition: all .8s ease 1.5s;
+  transition: all .8s ease 1.5s;
 }
 
 .intro__line {
@@ -388,6 +365,13 @@ body {
       justify-self: end;
 }
 
+.guests__title._watcher-view {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 .guests__beards {
   margin: 0 -1rem;
 }
@@ -424,6 +408,8 @@ body {
 }
 
 .guests__time {
+  position: relative;
+  z-index: 5;
   font-size: 54px;
   text-align: center;
   font-family: "Great Vibes";
@@ -595,6 +581,62 @@ body {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.dress__image_1 {
+  -webkit-transform: translate(100px, 0px) !important;
+      -ms-transform: translate(100px, 0px) !important;
+          transform: translate(100px, 0px) !important;
+}
+
+.dress__image_1._watcher-view {
+  -webkit-transition: all .8s ease 2s;
+  transition: all .8s ease 2s;
+  -webkit-transform: translate(0px, 0px) !important;
+      -ms-transform: translate(0px, 0px) !important;
+          transform: translate(0px, 0px) !important;
+}
+
+.dress__image_2 {
+  -webkit-transform: translate(100px, 0px) !important;
+      -ms-transform: translate(100px, 0px) !important;
+          transform: translate(100px, 0px) !important;
+}
+
+.dress__image_2._watcher-view {
+  -webkit-transition: all .8s ease 2.5s;
+  transition: all .8s ease 2.5s;
+  -webkit-transform: translate(0px, 0px) !important;
+      -ms-transform: translate(0px, 0px) !important;
+          transform: translate(0px, 0px) !important;
+}
+
+.dress__image_3 {
+  -webkit-transform: translate(100px, 0px) !important;
+      -ms-transform: translate(100px, 0px) !important;
+          transform: translate(100px, 0px) !important;
+}
+
+.dress__image_3._watcher-view {
+  -webkit-transition: all .8s ease 3s;
+  transition: all .8s ease 3s;
+  -webkit-transform: translate(0px, 0px) !important;
+      -ms-transform: translate(0px, 0px) !important;
+          transform: translate(0px, 0px) !important;
+}
+
+.dress__image_4 {
+  -webkit-transform: translate(100px, 0px) !important;
+      -ms-transform: translate(100px, 0px) !important;
+          transform: translate(100px, 0px) !important;
+}
+
+.dress__image_4._watcher-view {
+  -webkit-transition: all .8s ease 3.5s;
+  transition: all .8s ease 3.5s;
+  -webkit-transform: translate(0px, 0px) !important;
+      -ms-transform: translate(0px, 0px) !important;
+          transform: translate(0px, 0px) !important;
 }
 
 .dress__decor {
@@ -876,16 +918,16 @@ body {
 [data-watch] {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .7s ease 1s;
-  transition: all .7s ease 1s;
-  -webkit-transform: translate(0px, 20px);
-      -ms-transform: translate(0px, 20px);
-          transform: translate(0px, 20px);
+  -webkit-transform: translate(0px, 100px);
+      -ms-transform: translate(0px, 100px);
+          transform: translate(0px, 100px);
 }
 
 ._watcher-view {
   opacity: 1;
   visibility: visible;
+  -webkit-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
   -webkit-transform: translate(0px, 0px);
       -ms-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
