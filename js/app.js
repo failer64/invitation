@@ -127,6 +127,9 @@
             }));
         }
     }), 0);
+    document.addEventListener("click", (async function() {
+        document.getElementById("song").play();
+    }));
     function mapAdd() {
         var script = document.createElement("script");
         script.src = "https://api-maps.yandex.ru/2.1?apikey=8d7bd03a-f132-4234-ac7b-1e031670c1a1&lang=ru_RU&load=Map,Placemark";
