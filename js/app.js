@@ -119,7 +119,11 @@
     }
     modules_Modules.watcher = new ScrollWatcher({});
     document.addEventListener("click", (async function() {
-        document.getElementById("song").play();
+        var myAudio = document.getElementById("song");
+        function togglePlay() {
+            return myAudio.paused ? myAudio.play() : myAudio.pause();
+        }
+        togglePlay();
     }));
     function mapAdd() {
         var script = document.createElement("script");
