@@ -5,12 +5,12 @@
         function testWebP(callback) {
             let webP = new Image;
             webP.onload = webP.onerror = function() {
-                callback(webP.height == 2);
+                callback(2 == webP.height);
             };
             webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
         }
         testWebP((function(support) {
-            let className = support === true ? "webp" : "no-webp";
+            let className = true === support ? "webp" : "no-webp";
             document.documentElement.classList.add(className);
         }));
     }
@@ -68,13 +68,13 @@
         }
         getScrollWatcherConfig(paramsWatch) {
             let configWatcher = {};
-            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") this.scrollWatcherLogging(`Эмм... родительского объекта ${paramsWatch.root} нет на странице`);
+            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if ("null" !== paramsWatch.root) this.scrollWatcherLogging(`Эмм... родительского объекта ${paramsWatch.root} нет на странице`);
             configWatcher.rootMargin = paramsWatch.margin;
             if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
                 this.scrollWatcherLogging(`Ой ой, настройку data-watch-margin нужно задавать в PX или %`);
                 return;
             }
-            if (paramsWatch.threshold === "prx") {
+            if ("prx" === paramsWatch.threshold) {
                 paramsWatch.threshold = [];
                 for (let i = 0; i <= 1; i += .005) paramsWatch.threshold.push(i);
             } else paramsWatch.threshold = paramsWatch.threshold.split(",");
@@ -131,19 +131,19 @@
     }
     if (document.querySelector("#map")) mapAdd();
     function init(ymaps) {
-        let myMap = new ymaps.Map("map", {
+        const myMap = new ymaps.Map("map", {
             controls: [],
             center: [ 55.502474, 37.584969 ],
             zoom: 16
         });
-        let myPlacemark = new ymaps.Placemark([ 55.502474, 37.584969 ], {
+        const myPlacemark = new ymaps.Placemark([ 55.502474, 37.584969 ], {
             balloonContentHeader: "Sushi",
             balloonContentBody: "ул. Манасчи Сагымбая 24 к.1",
             balloonContentFooter: "<a  href = 'tel:88129050600' > 8 (999) 999-99-99 </a >",
             hasBalloon: true,
             hideIconOnBalloonOpen: true
         }, {
-            iconLayout: "default#imageWithContent",
+            preset: "islands#redIcon",
             iconImageSize: [ 35, 35 ],
             iconImageOffset: [ -20, -20 ],
             iconContentOffset: [ 0, 0 ]
